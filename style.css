@@ -1,0 +1,271 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 324px;
+    height: 500px;
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 20px;
+    position: relative;
+}
+.container:hover{
+    transform: scale(1.2);
+    transition: 2s;
+}
+.head{
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    border-radius: 100px 100px 50px 0px ;
+    background-color: yellow;
+    top: 40px;
+    border: 4px solid black;
+    border-bottom: none;
+    transform: rotate(-10deg);
+}
+.head::before{
+    content: "";
+    position: absolute;
+    width:20px;
+    height:25px;
+    border-radius: 50%;
+    left:135px;
+    border-right:4px solid black ;
+    top: 100px;
+    background-color: yellow;
+}
+.head::after{
+    content: "";
+    width: 30px;
+    height: 45px;
+    background-color: yellow;
+    position: absolute;
+    top: 160px;
+    left: -20px;
+    border:4px solid black ;
+    border-right: none;
+    border-radius: 18px;
+}
+.eye1{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+    top: 150px;
+    left: 120px;
+    border: 2px solid black;
+    z-index: 1;
+}
+.eye1::after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    top:35px ;
+    left:20px ;
+    animation: eye 10s linear  infinite;
+}
+.eye2{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+    top:150px;
+    left:180px ;
+    border: 3px solid black;
+}
+.eye2::after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    top:40px ;
+    left:30px ;
+    animation: eye 10s linear  infinite;
+}
+.neck{
+    position: absolute;
+    width: 110px;
+    height: 170px;
+    transform: skew(-15deg);
+    background-color: yellow;
+    top: 240px;
+    left: 90px;
+    border-left: 4px solid black;
+}
+.neck::after{
+    position: absolute;
+    left: -10px;
+    content: "";
+    z-index: 4;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+}
+.neck::before{
+    content: "";
+    background-color: black;
+    width: 2px;
+    height: 7px;
+    position: absolute;
+    z-index: 5;
+    left: -20px;
+    transform: rotate(-15deg);
+}
+.neck .after{
+    position: absolute;
+    content: "";
+    background-color: black;
+    width: 2px;
+    height: 7px;
+    position: absolute;
+    z-index: 5;
+    left: -20px;
+    transform: rotate(60deg);
+}
+.nose{
+    position: absolute;
+    width: 63px;
+    height: 30px;
+    border-radius:0px 20px 20px 0px;
+    background-color: yellow;
+    border: 3px solid black;
+    z-index: 2;
+    border-left: none;
+    top: 208px;
+    left: 184px;
+}
+.mouth{
+    position: absolute;
+    width: 115px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: darkkhaki;
+    top: 241px;
+    left: 130px;
+    border: 3px solid black;
+}
+.mouth::after{
+    position: absolute;
+    content: "";
+    width: 70px;
+    height: 65px;
+    border: 3px solid black;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: darkkhaki;
+    border-radius: 50%;
+    top: 30px;
+    left: 10px;
+    transform: rotate(10deg);
+}
+.mouth .before{
+    background-color: darkkhaki;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    top: 63px;
+    left: 66px;
+    border-bottom: 3px solid black;
+    z-index: 2;
+    transform: rotate(-40deg);
+}
+.smile{
+    position: absolute;
+    width: 80px;
+    height: 60px;
+    background-color: darkkhaki;
+    z-index: 3;
+    transform: rotate(40deg);
+    border-radius: 50px;
+    left: -5px;
+    top: -45px;
+    border-bottom: 3px solid black;
+}
+.smile::after{
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: -3px;
+    transform: rotate(-35deg);
+    width: 7px;
+    height: 2px;
+    background-color: black;
+}
+.hair{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: 50px;
+    border-top: 4px solid black;
+    left: 60px;
+    transform: rotate(-50deg);
+}
+.hair1{
+    content: "";
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: 35px;
+    border-top: 4px solid black;
+    left: 90px;
+    transform: rotate(-50deg);
+}
+.neck-curve{
+    height: 80px;
+    width: 21px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    top: 333px;
+    left: 181px;
+    transform: rotate(12deg);
+    border-left: 2px solid black;
+}
+@keyframes eye{
+    0%{
+        top: 20px;
+        left: 20px;
+    }
+    20%{
+        top: 20px;
+        left: 40px;
+    }
+    40%{
+        top: 40px;
+        left: 40px;
+    }
+    60%{
+        top: 40px;
+        left: 20px;
+    }
+    80%{
+        top: 40px;
+        left: 20px;
+    }
+    100%{
+        top: 20px;
+        left: 20px;
+    }
+    
+
+}
